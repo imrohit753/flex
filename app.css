@@ -1,17 +1,9 @@
-/* *{
+*{
     margin: 0px;
     padding: 0px;
-} */
-.main{
-    display: flex;
-    flex-direction: row;
-    margin: 10px;
-    justify-content: space-around;
-    
 }
 .header{
     height: 100px;
-    width: auto;
     background-color: #9828c8;
     color: white;
     font-size: 35px;
@@ -20,26 +12,35 @@
     align-items: center;
     padding-left: 10px;
 }
-.first > p{
+.main{
+    display: flex;
+    flex-direction: row;
+    margin: 10px;
+    width: 98%;
+    justify-content: space-around;
+}
+.main>div{
+    width: 33%;
+    flex-wrap: wrap;
+}
+.first>div{
     background-color: #4cb8e2;
     color: white;
-    width: 310px;
+    width: 72%;
     height: 20px;
-    font-size: 20px;
-    display: flex;
-    align-items: center;
+    font-size: 22px;
+    font-weight: 700;
     padding: 10px;
+    margin: 8px 30px;
 }
 .centre{
-    display: inline-block;
-    flex-direction: column;
-    align-items: center;
-    padding: 20px;
-    width: 900px;
+    color: #4cb8e2;
+    margin-right: 20px;
 }
-.paragraph{
-    font-size: 20px;
-
+.centre>h1{
+    margin-top: 15px;
+    margin-bottom: 25px;
+    
 }
 .box{
     width: 450px;
@@ -47,21 +48,63 @@
     background-color: #4cb8e2;
     color: white;
     display: inline-block;
-    
+    justify-content: center;
     text-align: center;
-    font-size: 18px;
+    font-size: 17px;
     padding: 15px;
+}
+.box>div{
+    background-color: #4cb8e2;
+    width: 70%;
+    padding-bottom: 20px;
+}
+.box>h1{
+    padding: 18px;
 }
 .footer{
     color: white;
     background-color: #319bc9;
-    font-size: 17px;
-    /* width: auto; */
-    height: 70px;
     display: flex;
     flex-direction: column;
-    align-items:center;
-    justify-content: center;
-    margin-top: 10px;
+    text-align: center;
+    margin-top: 20px;
+    padding: 25px;
+}
+@media screen and (max-width: 650px) {
+    .main{
+        width: 100%;
+        flex-wrap: wrap;
+     }
+     .main>div{
+        width: 50%;
+        flex-wrap: wrap;
+    }
+    .main>.box{
+        width: 100%;
+        margin-top: 30px;
+        margin-left: 30px;
+        margin-right: 40px;
+    }
+    .box>div{
+        background-color: #920606;
+        padding-bottom: 20px;
+        width: 100%;
 
+    }
+}
+@media screen and (max-width: 420px) {
+    .main{
+        width: 100%;
+        flex-wrap: wrap;
+     }
+     .main>div{
+        width: 100%;
+        flex-wrap: wrap;
+    }
+    .main1>div{
+        width: 80%;
+    }
+    .centre{
+        margin: 0px 40px 20px 40px;
+    }
 }
